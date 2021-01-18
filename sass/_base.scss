@@ -16,6 +16,10 @@ html {
 
 body {
     font-family: $font-primary;
-    display: grid;
 }
 
+.container {
+    display: grid;
+    grid-template-rows: 80vh min-content 40vw min-content min-content min-content;
+    grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+}
