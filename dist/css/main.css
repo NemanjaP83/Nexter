@@ -31,6 +31,23 @@ body {
       grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
 }
 
+.heading-1, .heading-2, .heading-3, .heading-4 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+}
+
+.heading-4 {
+  font-size: 1.9rem;
+}
+
+.heading-4--light {
+  color: #f9f7f6;
+}
+
+.heading-4--dark {
+  color: #54483A;
+}
+
 .sidebar {
   background-color: #c69963;
   -ms-grid-column: 1;
@@ -54,10 +71,42 @@ body {
 }
 
 .features {
-  background-color: #f9f7f6;
   -ms-grid-column: 3;
   -ms-grid-column-span: 8;
   grid-column: 3 / 11;
+  margin: 15rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 6rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.features .feature {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: min-content 1fr;
+      grid-template-columns: -webkit-min-content 1fr;
+      grid-template-columns: min-content 1fr;
+  row-gap: 1.5rem;
+  -webkit-column-gap: 2.5rem;
+          column-gap: 2.5rem;
+}
+
+.features .feature__icon {
+  fill: #c69963;
+  width: 4.5rem;
+  height: 4.5rem;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+}
+
+.features .feature__text {
+  font-size: 1.7rem;
 }
 
 .story {
