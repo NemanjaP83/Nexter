@@ -7,6 +7,10 @@
     gap: 6rem;
     align-items: start;
 
+    @media only screen and (max-width: 500px) {
+        margin: 7rem 0;
+    }
+
     .feature {
         display: grid;
         grid-template-columns: min-content 1fr;

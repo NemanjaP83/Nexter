@@ -3,8 +3,14 @@
 
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    
 
+    @media only screen and (max-width: 800px) {
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       overflow: hidden;
+    }
+    
     &__pictures {
         background-color: $color-primary;
         grid-column: 1 / 5;
@@ -12,15 +18,30 @@
         background-image: url('/dist/assets/img/back.jpg');
         background-size: cover;
         background-position: center;
+
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (max-width: 800px) {
+            padding: 6rem;
+            display: flex;
+            justify-content: flex-start;
+            
+            
+        }
 
         &__img--1 {
             display: block;
             width: 70%;
             height: 60%;
             box-shadow: 0 2rem 5rem rgba(0, 0, 0, .1);
+
+            @media only screen and (max-width: 800px) {
+                width: 60%;
+                height: 60%;
+                
+            }
         }
 
         &__img--2 {
@@ -29,6 +50,12 @@
             top: 50%;
             left: 50%;
             box-shadow: 0 2rem 5rem rgba(0, 0, 0, .2);
+
+            @media only screen and (max-width: 800px) {
+                width: 40%;
+                top: 30%;
+                left: 50%;
+            }
         }
     }
 
@@ -36,6 +63,10 @@
         background-color: $color-grey-light-1;
         grid-column: 5 / 9;
         padding: 6rem 8vw;
+
+        @media only screen and (max-width: 800px) {
+            order: -1;
+        }
 
         // display: grid;
         // align-content: center;

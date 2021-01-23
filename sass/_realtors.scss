@@ -6,6 +6,12 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: 800px) {
+        grid-column: 1 / -1 ;
+        padding: 3rem 0;
+    }
+
+
     &__list {
         display: grid;
         grid-template-columns: min-content max-content;
@@ -13,6 +19,15 @@
         row-gap: 5vh;
         align-items: center;
         margin-top: 4vh;
+
+        @media only screen and (max-width: 800px) {
+            grid-template-columns: repeat(3, min-content max-content); 
+        }
+
+        @media only screen and (max-width: 600px) {
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
     }
 
     &__img {

@@ -12,6 +12,10 @@ html {
     color: $color-grey-dark-2;
     font-weight: 300;
     line-height: 1.6;
+
+    @media screen and (max-width: 1200px) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -22,4 +26,15 @@ body {
     display: grid;
     grid-template-rows: 80vh min-content 40vw min-content min-content min-content;
     grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+
+    @media only screen and (max-width: 1000px) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: 0 minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+    }
+
+    @media only screen and (max-width: 800px) {
+        grid-template-rows: 6rem calc(100vh - 6rem) min-content minmax(40vh, min-content) min-content min-content min-content;
+        grid-template-columns: 0 minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+    }
+
 }
